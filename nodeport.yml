@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: es-nodeport 
+  labels:
+    app: elasticsearch
+spec:
+  selector:
+    app: elasticsearch
+  ports:
+    - port: 9200
+  type: NodePort
